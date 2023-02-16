@@ -1,0 +1,52 @@
+version: '3.8'
+services:
+# Jenkins docker-in-docker
+  docker:
+    container_name: jenkins-docker
+    privileged: true
+    networks:
+      - jenkins
+    environment:
+      - DOCKER_TLS_CERTDIR=/certs
+    volumes:
+      - jenkins-docker-certs:/certs/client
+      - jenkins-data:/var/jenkins_home
+    ports:
+      - 2376:2376
+      - 3000:3000
+      - 5000:5000
+    image: 'docker:dind'
+
+    # Jenkins server
+  myjenkins-blueocean:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jenkins-blueocean
+    networks:
+      - jenkins
+    environment:
+      - DOCKER_HOST=tcp://docker:2376
+      - DOCKER_CERT_PATH=/certs/client
+      - DOCKER_TLS_VERIFY=1
+      - JAVA_OPTS=-Dhudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT=true
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - jenkins-data:/var/jenkins_home
+      - jenkins-docker-certs:/certs/client:ro
+      - $HOME:/home
+      - ./simple-java-maven-app:/simple-java-maven-app
+      - ./simple-java-maven-app.git:/simple-java-maven-app.git
+    restart: on-failure
+    # image: 'myjenkins-blueocean:2.375.3-1'
+    image: myjenkins-blueocean
+
+networks:
+  jenkins:
+
+volumes:
+  jenkins-docker-certs:
+  jenkins-data:
+  
