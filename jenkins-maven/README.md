@@ -12,7 +12,8 @@ The repository provides a quick-to-deploy self-contained Docker-based environmen
 
 You can preview the [demo script](#the-demo-script) in the screencast:
 
-https://user-images.githubusercontent.com/1809272/219696668-5415e266-57df-4539-a1c9-51a39d7b7cb1.mp4
+https://user-images.githubusercontent.com/1809272/219722105-cbd7977f-53f4-43a7-87c6-fc64223fb5b2.mp4
+
 
 ## Demo setup
 
