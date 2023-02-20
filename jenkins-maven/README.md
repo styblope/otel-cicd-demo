@@ -6,7 +6,7 @@ flowchart LR
     J-.release marker API..->I
 ```
 
-This demo shows an example of OpenTelemetry CI/CD pipeline tracing using Jenkins and Maven. Traces and metrics are sent to Instana observability platform via an OTLP-enabled Instana agent. The demo also illustrates a DevOps pipeline feedback use-case leveraging the Instana release markers API integration. OpenTlemetry support is provided through readily available plugins/extensions.
+This demo shows an example of OpenTelemetry CI/CD pipeline tracing using Jenkins and Maven. Traces and metrics are sent to Instana observability platform via an OTLP-enabled Instana agent. The demo also illustrates a DevOps pipeline feedback use-case leveraging the Instana release markers API integration. OpenTelemetry support is provided through readily available plugins/extensions.
 
 The repository provides a quick-to-deploy self-contained Docker-based environment that can be easily integrated with Instana monitoring infrastructure. 
 
@@ -30,7 +30,7 @@ git clone https://github.com/styblope/otel-cicd-demo.git
 cd cicd/jenkins-maven
 ```
 
-Setup sample Java application Git repo
+Setup the sample Java application local Git repo
 ```sh
 git clone simple-java-maven-app.git
 cd simple-java-maven-app
@@ -44,7 +44,7 @@ Build and run Jenkins server
 docker compose up -d
 ```
 
-> **Important:*ns``*
+> **Important:**
 > If your Instana backend is **self-hosted** with a self-signed certificate you have to **import the certificate** to the server's Java keystore to allow Instana API access. Copy the certificate as `instana.crt` to the working directory and uncomment the respective section inside the [Dockerfile](./Dockerfile) prior to building the project.
 
 Finish the installation and setup by following the Jenkins tutorial from [this point](https://www.jenkins.io/doc/tutorials/build-a-java-app-with-maven/#accessing-the-jenkins-blue-ocean-docker-container).
