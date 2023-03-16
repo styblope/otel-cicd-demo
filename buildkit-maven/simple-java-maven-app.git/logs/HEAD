@@ -1,0 +1,9 @@
+0000000000000000000000000000000000000000 5f04f8976f3f909b03ca6a18c696ac53d0c3f53e Petr Styblo <styblope@gmail.com> 1676386263 +0100	clone: from https://github.com/jenkins-docs/simple-java-maven-app.git
+5f04f8976f3f909b03ca6a18c696ac53d0c3f53e 0d08f27ef6292637821e8c144ed6d98fcf24f65e Petr Styblo <styblope@gmail.com> 1676386299 +0100	commit: add custom Jenkinsfile
+0d08f27ef6292637821e8c144ed6d98fcf24f65e 930c2595e2425011734e3b1e3b5333aeb6a2589e Petr Styblo <styblope@gmail.com> 1676387125 +0100	commit (amend): add custom Jenkinsfile
+930c2595e2425011734e3b1e3b5333aeb6a2589e be952bfc3aa00ccb353bf5da1827f8c6acd1159f Petr Styblo <styblope@gmail.com> 1676399021 +0100	commit: add Instana releaser marker
+be952bfc3aa00ccb353bf5da1827f8c6acd1159f 8cc04a7751a2bce7d42453ec0a2d0d45f0aa65ca Petr Styblo <styblope@gmail.com> 1676399209 +0100	commit (amend): add Instana releaser marker
+8cc04a7751a2bce7d42453ec0a2d0d45f0aa65ca 2635f0b899dee93330976ab203a306be07d8a741 Petr Styblo <styblope@gmail.com> 1676399388 +0100	commit (amend): add Instana releaser marker
+2635f0b899dee93330976ab203a306be07d8a741 873523d180c540e848d27f89821df1faf442601b Petr Styblo <styblope@gmail.com> 1676399613 +0100	commit (amend): add Instana release marker
+873523d180c540e848d27f89821df1faf442601b 2dc9f7d400f1b4c646751b8b239097d710abd220 Petr Styblo <styblope@gmail.com> 1676407882 +0100	commit (amend): add Instana release marker
+2dc9f7d400f1b4c646751b8b239097d710abd220 e969ad040b1877d11443eb2d8f4c03ffebf5b4fb Petr Styblo <styblope@gmail.com> 1676453702 +0100	commit: add maven otel extension

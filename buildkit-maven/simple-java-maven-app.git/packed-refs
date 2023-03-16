@@ -1,0 +1,6 @@
+# pack-refs with: peeled fully-peeled sorted 
+e969ad040b1877d11443eb2d8f4c03ffebf5b4fb refs/heads/master
+a4281b0b2559a4ca5cf383872f6e20179242b483 refs/remotes/origin/bitwiseman-patch-1
+5f04f8976f3f909b03ca6a18c696ac53d0c3f53e refs/remotes/origin/master
+a4281b0b2559a4ca5cf383872f6e20179242b483 refs/remotes/upstream/bitwiseman-patch-1
+5f04f8976f3f909b03ca6a18c696ac53d0c3f53e refs/remotes/upstream/master

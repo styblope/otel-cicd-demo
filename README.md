@@ -2,11 +2,12 @@
 
 Demo showcase of various OpenTelemetry-enabled CI/CD pipeline toolchains.
 
-[Jenkins + Maven + Instana](./jenkins-maven)
+[Jenkins + Maven](./jenkins-maven)  
+[Docker BuildKit + Maven](./buildkit-maven)
 
 #### TODO
-- [Docker BuildKit](https://github.com/moby/buildkit)
 - [Tekton Pipelines](https://github.com/tektoncd/pipeline/blob/main/docs/developers/tracing.md)
 - [GitHub Actions](https://github.com/marketplace/actions/opentelemetry-export-trace)
 - [ArgoCD](https://github.com/argoproj/argo-cd/pull/7539)
 - [Ansible](https://github.com/argoproj/argo-cd/pull/7539)
+- [GitLab](https://gitlab.com/gitlab-org/gitlab/-/issues/338943)
