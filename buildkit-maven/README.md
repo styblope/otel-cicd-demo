@@ -17,7 +17,7 @@ The repository provides a quick-to-deploy self-contained Docker-based environmen
 Clone the demo repository
 ```sh
 git clone https://github.com/styblope/otel-cicd-demo.git
-cd cicd/buildkit-maven
+cd otel-cicd-demo/buildkit-maven
 ```
 
 Create the buildx builder

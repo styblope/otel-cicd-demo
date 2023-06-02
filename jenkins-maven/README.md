@@ -27,7 +27,7 @@ https://user-images.githubusercontent.com/1809272/219722105-cbd7977f-53f4-43a7-8
 Clone the demo repository
 ```sh
 git clone https://github.com/styblope/otel-cicd-demo.git
-cd cicd/jenkins-maven
+cd otel-cicd-demo/jenkins-maven
 ```
 
 Setup the sample Java application local Git repo
