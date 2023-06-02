@@ -30,7 +30,7 @@ docker buildx create --name mybuilder \
 
 Run the build
 ```sh
-docker buildx build --builder mybuilder --no-cache --build-args  .
+docker buildx build --builder mybuilder -t mybuild --no-cache --build-arg OTEL_EXPORTER_OTLP_ENDPOINT .
 ```
 
 Note, the `--no-cache` option is used here to perform a clean build each time we run the build command. Build cache would be normally used in production to significantly cut down the build times.
