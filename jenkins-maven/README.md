@@ -44,9 +44,8 @@ Build and run Jenkins server
 docker compose up -d
 ```
 
-> **Important:**
-> If your Instana backend is **self-hosted** with a self-signed certificate you have to **import the certificate** to the server's Java keystore to allow Instana API access. Copy the certificate as `instana.crt` to the working directory and uncomment the respective section inside the [Dockerfile](./Dockerfile) prior to building the project.
-
+> **Important:**  
+> If your Instana backend is **self-hosted** using a self-signed certificate you have to **import the certificate** to the server's Java keystore to allow Instana API access.  The self-signed certificate location can be found in your self-hosted `settings.hcl` file. Copy and rename the certificate as `instana.crt` in the working directory and uncomment the respective section inside the [Dockerfile](./Dockerfile) prior to building the project.
 Finish the installation and setup by following the Jenkins tutorial from [this point](https://www.jenkins.io/doc/tutorials/build-a-java-app-with-maven/#accessing-the-jenkins-blue-ocean-docker-container).
 
 To avoid using a separate online source code repository, the demo mounts the sample application source (`simple-java-maven-app`) as a local Git directory inside the Jenkis server container. We'll point to this directory later when configuring the Jenkins pipeline.
@@ -124,6 +123,8 @@ In the main Jenkins screen, use **New Item** and create a new **Pipeline** named
 2. Wait until the pipeline completes 
 
    ![script-pipeline-done](img/script-pipeline-done.png)
+
+   > **Warning:** If your build fails, check the logs to find out the reason. First-time build will likely fail with 400 response and "No service found for name(s) 'jenkins-pipelines'" error message. This means the Instana release marker could not be matched to the service. Try to run the pipeline once or more times again to producte some traces that will create the service instance in Instana.
 
 3. Click on the pipeline build number to open the build summary page.
 
